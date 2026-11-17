@@ -14,18 +14,34 @@ const emptyForm = { name: '', email: '', projectType: 'Web App', message: '' }
 export default function Contact() {
   const [form, setForm] = useState(emptyForm)
   const [sent, setSent] = useState(false)
+  const [sending, setSending] = useState(false)
 
-  // Update one field when the user types
+    // Update one field when the user types
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  // Handle form submit. Replace the console.log with a real email service later.
-  const handleSubmit = (e) => {
+  // Send the form to Formspree. Data is delivered to your email.
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log('Contact request:', form)
-    setSent(true)
-    setForm(emptyForm)
+    setSending(true)
+    try {
+      const res = await fetch('https://formspree.io/f/xwlooopr', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (res.ok) {
+        setSent(true)
+        setForm(emptyForm)
+      } else {
+        alert('Something went wrong. Please try again or contact me on WhatsApp.')
+      }
+    } catch {
+      alert('Network error. Please try again.')
+    } finally {
+      setSending(false)
+    }
   }
 
   const inputClass =
@@ -112,9 +128,13 @@ export default function Contact() {
                 <textarea required rows={5} name="message" value={form.message} onChange={handleChange} placeholder="Tell me about your idea, goals and timeline." className={inputClass} />
               </div>
 
-              <button type="submit" className="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-full bg-gradient-to-r from-indigo-600 to-pink-500 text-white font-semibold shadow-lg shadow-indigo-500/25 hover:-translate-y-0.5 transition">
-                <Send size={18} /> Send Message
-              </button>
+              <button
+  type="submit"
+  disabled={sending}
+  className="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-full bg-gradient-to-r from-indigo-600 to-pink-500 text-white font-semibold shadow-lg shadow-indigo-500/25 hover:-translate-y-0.5 transition disabled:opacity-60"
+>
+  <Send size={18} /> {sending ? 'Sending...' : 'Send Message'}
+</button>
             </form>
           )}
         </motion.div>
