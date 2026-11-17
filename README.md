@@ -1,16 +1,89 @@
-# React + Vite
+# Daniyal Dynihmind | Portfolio 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My personal portfolio website showcasing six production-ready projects: SaaS dashboards, AI-powered tools, booking systems, agency landing pages and restaurant websites. Built with React, Tailwind CSS and Framer Motion.
 
-Currently, two official plugins are available:
+**Live Portfolio:** https://daniyal-portfolio-five.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📌 Purpose
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Clients often need proof before they hire. This portfolio presents my work clearly, with live demos and source code, so visitors can judge quality and reach out quickly.
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🎨 **Modern Light Design:** Clean, premium look with soft gradients and floating blurred shapes
+- 🧭 **Sticky Navbar:** Glass effect on scroll, smooth section navigation and mobile menu
+- 🚀 **Hero Section:** Clear value proposition, call-to-action buttons and quick stats
+- 👤 **About Section:** Professional bio and skill chips
+- 🧩 **Services:** Six service cards with animated hover effects
+- 💼 **Projects:** Six live projects with demo and code links
+- 🔄 **Process:** Three-step working method (Discover, Build, Launch)
+- ⭐ **Testimonials:** Client reviews with star ratings
+- 📩 **Contact:** Email, WhatsApp, LinkedIn and a working contact form
+- 📱 **Fully Responsive:** Optimized for mobile, tablet and desktop
+- 🎞️ **Scroll Animations:** Framer Motion reveal effects throughout
+
+---
+
+## 🛠️ Tech Stack
+
+- **React** (Vite)
+- **Tailwind CSS** (v3)
+- **Framer Motion** (animations)
+- **Lucide React** (icons)
+- **Inter** font (Google Fonts)
+- **Vercel** (hosting)
+
+---
+
+## 📂 Project Structure
+
+daniyal-portfolio/
+├── public/
+│ └── me.jpg
+├── index.html
+├── src/
+│ ├── main.jsx
+│ ├── App.jsx
+│ ├── index.css
+│ └── components/
+│ ├── Navbar.jsx
+│ ├── Hero.jsx
+│ ├── About.jsx
+│ ├── Services.jsx
+│ ├── Projects.jsx
+│ ├── Process.jsx
+│ ├── Testimonials.jsx
+│ ├── Contact.jsx
+│ └── Footer.jsx
+├── tailwind.config.js
+└── package.json
+
+
+
+---
+
+## 🚀 Run Locally
+
+```bash
+git clone https://github.com/Daniyal-Dynihmind/daniyal-portfolio.git
+cd daniyal-portfolio
+npm install
+npm run dev
+Then open http://localhost:5173.
+
+---
+🔭 Future Improvements
+Connect the contact form to a real email service (Formspree or Supabase)
+Blog section for SEO and content marketing
+Case studies for each project with metrics
+Multi-language support
+
+👨‍💻 Author
+Daniyal Dynihmind
+Full-Stack and AI Web App Builder | Karachi, Pakistan
+
+GitHub: @Daniyal-Dynihmind
+Open for freelance and client projects
+If you like this project, give it a ⭐ on GitHub!
