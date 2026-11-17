@@ -76,9 +76,11 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative mx-auto"
         >
-          <div className="w-72 h-72 md:w-96 md:h-96 rounded-[2.5rem] bg-gradient-to-br from-indigo-500 via-violet-500 to-pink-500 shadow-2xl shadow-indigo-500/30 flex items-center justify-center">
-            <span className="text-white text-7xl font-extrabold">DD</span>
-          </div>
+        <img
+            src="/me.jpg"
+            alt="Daniyal Dynihmind"
+            className="w-72 h-72 md:w-96 md:h-96 rounded-[2.5rem] object-cover shadow-2xl shadow-indigo-500/30"
+        />
           {/* Floating card on top of the avatar */}
           <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl border border-stone-100 px-5 py-4">
             <p className="text-xs text-stone-500">Latest project</p>
