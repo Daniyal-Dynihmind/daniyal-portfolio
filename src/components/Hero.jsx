@@ -37,8 +37,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-6 text-lg text-stone-600 max-w-xl leading-relaxed">
-            Hi, I'm Daniyal, a full-stack and AI web app builder from Karachi. I design and ship SaaS dashboards,
-            booking systems, restaurant websites and AI-powered tools for startups and businesses worldwide.
+           Hi, I'm Daniyal, a web developer who builds modern, fast and responsive websites and web applications for startups and businesses worldwide. I create SaaS dashboards, booking systems, restaurant websites and AI-powered tools using React, Tailwind CSS and Google Gemini. I also use vibe coding with modern AI tools to turn ideas into working products much faster, without losing code quality or clean design. Alongside development, I work as a System Administrator and IT Infrastructure specialist, managing Windows systems, networks, servers and technical support, so every product I build runs reliably after launch.
           </p>
 
           {/* CTA buttons */}
